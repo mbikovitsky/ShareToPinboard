@@ -21,12 +21,12 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Help">
+    <PreferenceCategory app:title="@string/help_preferences_header">
 
         <Preference
             app:fragment="com.bikodbg.sharetopinboard.AboutFragment"
-            app:summary="About this app"
-            app:title="About" />
+            app:summary="@string/about_preference_summary"
+            app:title="@string/about_preference_title" />
 
     </PreferenceCategory>
 
