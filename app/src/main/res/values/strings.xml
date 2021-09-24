@@ -17,4 +17,6 @@
     <string name="pinboard_unread_by_default_preference_title">Unread by default</string>
     <string name="pinboard_unread_by_default_summary_on">Shared items will be marked unread</string>
     <string name="pinboard_unread_by_default_summary_off">Shared items will NOT be marked unread</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

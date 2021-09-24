@@ -21,4 +21,13 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="Help">
+
+        <Preference
+            app:fragment="com.bikodbg.sharetopinboard.AboutFragment"
+            app:summary="About this app"
+            app:title="About" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
