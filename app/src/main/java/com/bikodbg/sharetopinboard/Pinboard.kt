@@ -6,8 +6,6 @@ import org.json.JSONObject
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
-private const val TAG = "Pinboard"
-
 class PinboardException(message: String) : Exception(message)
 
 class Pinboard(private val token: String) {
@@ -59,9 +57,13 @@ class Pinboard(private val token: String) {
         connection.connect()
 
         val response = connection.inputStream
-            .readAll(100)
-            .toString(charset("UTF-8"))
+            .readBytes()
+            .toString(Charsets.UTF_8)
 
         return JSONObject(response)
+    }
+
+    companion object {
+        private const val TAG = "Pinboard"
     }
 }
