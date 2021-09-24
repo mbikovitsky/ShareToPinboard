@@ -29,7 +29,7 @@ class AboutFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val aboutHtml = getString(R.string.about)
+        val aboutHtml = getString(R.string.about, BuildConfig.VERSION_NAME)
         val about = HtmlCompat.fromHtml(aboutHtml, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
         binding.aboutText.text = about

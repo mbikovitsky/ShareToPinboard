@@ -25,6 +25,7 @@
 
     <string name="about"><![CDATA[
 <h1>About</h1>
+<p>Version %1$s.</p>
 <p>This is an app with a single purpose: to send URLs to <a href="https://pinboard.in/">Pinboard</a> without a fuss.</p>
 <p>Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache License 2.0</a>.</p>
 <p>The app icon was generated from the stock Android Studio vector assets, licensed under the same terms.</p>
