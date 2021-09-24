@@ -17,6 +17,11 @@
     <string name="pinboard_unread_by_default_preference_title">Unread by default</string>
     <string name="pinboard_unread_by_default_summary_on">Shared items will be marked unread</string>
     <string name="pinboard_unread_by_default_summary_off">Shared items will NOT be marked unread</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="about"><![CDATA[
+<h1>About</h1>
+<p>This is an app with a single purpose: to send URLs to <a href="https://pinboard.in/">Pinboard</a> without a fuss.</p>
+<p>Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache License 2.0</a>.</p>
+<p>The app icon was generated from the stock Android Studio vector assets, licensed under the same terms.</p>
+]]></string>
 </resources>
