@@ -6,29 +6,22 @@ import android.widget.Toast
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 
-private const val TAG = "PinboardWorker"
+class PinboardWorker(context: Context, workerParams: WorkerParameters) :
+    Worker(context, workerParams) {
 
-class PinboardWorker(appContext: Context, workerParams: WorkerParameters) :
-    Worker(appContext, workerParams) {
-
-    companion object {
-        const val URL_KEY = "url"
-        const val TITLE_KEY = "title"
-    }
+    private val preferences = Preferences(context)
 
     override fun doWork(): Result {
         try {
-            val title = inputData.getString(TITLE_KEY) ?: "[no title]"
+            val title = inputData.getString(KEY_TITLE) ?: "[no title]"
             Log.i(TAG, "Title: $title")
 
-            val url = inputData.getString(URL_KEY)
+            val url = inputData.getString(KEY_URL)
             if (null == url) {
                 reportError(TAG, "No URL shared", applicationContext)
                 return Result.failure()
             }
             Log.i(TAG, "URL: $url")
-
-            val preferences = Preferences(applicationContext)
 
             val token = preferences.token
             if (null == token) {
@@ -57,5 +50,12 @@ class PinboardWorker(appContext: Context, workerParams: WorkerParameters) :
             reportException(TAG, "Upload to Pinboard failed", exception, applicationContext)
             return Result.failure()
         }
+    }
+
+    companion object {
+        private const val TAG = "PinboardWorker"
+
+        const val KEY_URL = "url"
+        const val KEY_TITLE = "title"
     }
 }

@@ -9,8 +9,6 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 
-private const val TAG = "ShareActivity"
-
 class ShareActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,12 +50,16 @@ class ShareActivity : AppCompatActivity() {
 
     private fun createWorkRequest(url: CharSequence?, title: CharSequence?): OneTimeWorkRequest {
         val workerData = Data.Builder()
-            .putString(PinboardWorker.URL_KEY, url?.toString())
-            .putString(PinboardWorker.TITLE_KEY, title?.toString())
+            .putString(PinboardWorker.KEY_URL, url?.toString())
+            .putString(PinboardWorker.KEY_TITLE, title?.toString())
             .build()
 
         return OneTimeWorkRequestBuilder<PinboardWorker>()
             .setInputData(workerData)
             .build()
+    }
+
+    companion object {
+        private const val TAG = "ShareActivity"
     }
 }
