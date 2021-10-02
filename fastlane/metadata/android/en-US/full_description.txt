@@ -1,0 +1,1 @@
+An app with a single purpose: to send URLs to <a href="https://pinboard.in/">Pinboard</a> without a fuss.
