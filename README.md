@@ -4,9 +4,9 @@ An app with a single purpose: to send URLs to [Pinboard][pinboard] without a fus
 
 ## Screenshots
 
-![The app's settings screen, showing controls for configuring the Pinboard token, the visibility of new items, and whether new items will be marked as unread](./screenshots/settings.png)
+![The app's settings screen, showing controls for configuring the Pinboard token, the visibility of new items, and whether new items will be marked as unread](./fastlane/metadata/android/en-US/images/phoneScreenshots/1.png)
 
-![The app's "about" screen, showing more or less this text](./screenshots/about.png)
+![The app's "about" screen, showing more or less this text](./fastlane/metadata/android/en-US/images/phoneScreenshots/2.png)
 
 ## License
 
