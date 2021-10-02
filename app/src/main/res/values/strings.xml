@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Share to Pinboard</string>
+
+    <!-- Preference Titles -->
+    <string name="pinboard_preferences_header">Pinboard</string>
+    <string name="help_preferences_header">Help</string>
+
+    <!-- Pinboard Preferences -->
+    <string name="pinboard_token">pinboard_token</string>
+    <string name="pinboard_token_preference_title">Token</string>
+
+    <string name="pinboard_private_by_default">pinboard_private_by_default</string>
+    <string name="pinboard_private_by_default_preference_title">Private by default</string>
+    <string name="pinboard_private_by_default_summary_on">Shared items will be marked private</string>
+    <string name="pinboard_private_by_default_summary_off">Shared items will be marked public</string>
+
+    <string name="pinboard_unread_by_default">pinboard_unread_by_default</string>
+    <string name="pinboard_unread_by_default_preference_title">Unread by default</string>
+    <string name="pinboard_unread_by_default_summary_on">Shared items will be marked unread</string>
+    <string name="pinboard_unread_by_default_summary_off">Shared items will NOT be marked unread</string>
+
+    <!--  Help  -->
+    <string name="about_preference_title">About</string>
+    <string name="about_preference_summary">About this app</string>
+
+    <string name="about"><![CDATA[
+<h1>About</h1>
+<p>Version %1$s.</p>
+<p>This is an app with a single purpose: to send URLs to <a href="https://pinboard.in/">Pinboard</a> without a fuss.</p>
+<p>Licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0.txt">Apache License 2.0</a>.</p>
+<p>The app icon was generated from the stock Android Studio vector assets, licensed under the same terms.</p>
+]]></string>
+</resources>

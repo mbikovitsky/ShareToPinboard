@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/pinboard_preferences_header">
+
+        <EditTextPreference
+            app:key="@string/pinboard_token"
+            app:title="@string/pinboard_token_preference_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/pinboard_private_by_default"
+            app:summaryOff="@string/pinboard_private_by_default_summary_off"
+            app:summaryOn="@string/pinboard_private_by_default_summary_on"
+            app:title="@string/pinboard_private_by_default_preference_title" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/pinboard_unread_by_default"
+            app:summaryOff="@string/pinboard_unread_by_default_summary_off"
+            app:summaryOn="@string/pinboard_unread_by_default_summary_on"
+            app:title="@string/pinboard_unread_by_default_preference_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/help_preferences_header">
+
+        <Preference
+            app:fragment="com.bikodbg.sharetopinboard.AboutFragment"
+            app:summary="@string/about_preference_summary"
+            app:title="@string/about_preference_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
