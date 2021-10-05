@@ -5,10 +5,12 @@ import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.Keep
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
 import com.bikodbg.sharetopinboard.databinding.FragmentAboutBinding
 
+@Keep
 class AboutFragment : Fragment() {
     private var _binding: FragmentAboutBinding? = null
 
