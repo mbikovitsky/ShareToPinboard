@@ -10,6 +10,8 @@ class Preferences(context: Context) {
 
     val unread get() = sharedPreferences.getBoolean(unreadByDefaultKey, false)
 
+    val filterTwitter get() = sharedPreferences.getBoolean(filterTwitterKey, false)
+
     private val sharedPreferences =
         PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -20,4 +22,6 @@ class Preferences(context: Context) {
 
     private val unreadByDefaultKey =
         context.getString(R.string.pinboard_unread_by_default)
+
+    private val filterTwitterKey = context.getString(R.string.pinboard_filter_twitter)
 }

@@ -1,10 +1,12 @@
 package com.bikodbg.sharetopinboard
 
 import android.content.Context
+import android.net.Uri
 import android.util.Log
 import android.widget.Toast
 import androidx.work.Worker
 import androidx.work.WorkerParameters
+import com.bikodbg.sharetopinboard.filters.TwitterFilter
 
 class PinboardWorker(context: Context, workerParams: WorkerParameters) :
     Worker(context, workerParams) {
@@ -23,6 +25,9 @@ class PinboardWorker(context: Context, workerParams: WorkerParameters) :
             }
             Log.i(TAG, "URL: $url")
 
+            val filteredUrl = applyFilters(url)
+            Log.i(TAG, "Filtered URL: $filteredUrl")
+
             val token = preferences.token
             if (null == token) {
                 reportError(TAG, "No Pinboard token specified", applicationContext)
@@ -33,7 +38,7 @@ class PinboardWorker(context: Context, workerParams: WorkerParameters) :
 
             try {
                 pinboard.add(
-                    url,
+                    filteredUrl,
                     title,
                     replace = false,
                     shared = !preferences.private,
@@ -50,6 +55,16 @@ class PinboardWorker(context: Context, workerParams: WorkerParameters) :
             reportException(TAG, "Upload to Pinboard failed", exception, applicationContext)
             return Result.failure()
         }
+    }
+
+    private fun applyFilters(url: String): String {
+        var uri = Uri.parse(url)
+
+        if (preferences.filterTwitter) {
+            uri = TwitterFilter().apply(uri)
+        }
+
+        return uri.toString()
     }
 
     companion object {

@@ -19,6 +19,12 @@
             app:summaryOn="@string/pinboard_unread_by_default_summary_on"
             app:title="@string/pinboard_unread_by_default_preference_title" />
 
+        <SwitchPreferenceCompat
+            app:key="@string/pinboard_filter_twitter"
+            app:summaryOff="@string/pinboard_filter_twitter_summary_off"
+            app:summaryOn="@string/pinboard_filter_twitter_summary_on"
+            app:title="@string/pinboard_filter_twitter_preference_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/help_preferences_header">

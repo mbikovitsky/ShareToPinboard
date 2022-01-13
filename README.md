@@ -1,5 +1,15 @@
 # Share to Pinboard
 
+![Latest source release][github-shield]
+![F-Droid version][fdroid-shield]
+
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+    alt="Get it on F-Droid"
+    height="80">](https://f-droid.org/packages/com.bikodbg.sharetopinboard)
+[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+    alt="Get it on Google Play"
+    height="80">](https://play.google.com/store/apps/details?id=com.bikodbg.sharetopinboard)
+
 An app with a single purpose: to send URLs to [Pinboard][pinboard] without a fuss.
 
 ## Screenshots
@@ -17,3 +27,7 @@ An app with a single purpose: to send URLs to [Pinboard][pinboard] without a fus
 [pinboard]: https://pinboard.in/
 
 [apache]: https://www.apache.org/licenses/LICENSE-2.0.txt
+
+[github-shield]: https://img.shields.io/github/v/tag/mbikovitsky/ShareToPinboard?label=release&logo=github
+
+[fdroid-shield]: https://img.shields.io/f-droid/v/com.bikodbg.sharetopinboard

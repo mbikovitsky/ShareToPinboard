@@ -19,6 +19,11 @@
     <string name="pinboard_unread_by_default_summary_on">Shared items will be marked unread</string>
     <string name="pinboard_unread_by_default_summary_off">Shared items will NOT be marked unread</string>
 
+    <string name="pinboard_filter_twitter">pinboard_filter_twitter</string>
+    <string name="pinboard_filter_twitter_preference_title">Remove Twitter URL parameters</string>
+    <string name="pinboard_filter_twitter_summary_on">URL parameters will be removed from Twitter URLs</string>
+    <string name="pinboard_filter_twitter_summary_off">URL parameters will NOT be removed from Twitter URLs</string>
+
     <!--  Help  -->
     <string name="about_preference_title">About</string>
     <string name="about_preference_summary">About this app</string>
