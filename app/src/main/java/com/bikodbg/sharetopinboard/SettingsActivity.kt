@@ -24,7 +24,7 @@ class SettingsActivity : AppCompatActivity(),
         pref: Preference
     ): Boolean {
         val fragment =
-            supportFragmentManager.fragmentFactory.instantiate(classLoader, pref.fragment)
+            supportFragmentManager.fragmentFactory.instantiate(classLoader, pref.fragment!!)
 
         supportFragmentManager
             .beginTransaction()
